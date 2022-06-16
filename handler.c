@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * handle - handles opcodes
+ * handler - handles opcodes
  * @opcode: The opcode
  * @num: The number
  * @head: The head of the stack

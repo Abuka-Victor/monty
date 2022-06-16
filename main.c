@@ -1,6 +1,13 @@
 #include "monty.h"
 
-int main(int ac, char **av __attribute__((unused)))
+/**
+ * main - A monty interpreter
+ * @ac: The argument count
+ * @av: The argument vector
+ *
+ * Return: Always 0
+ */
+int main(int ac, char **av)
 {
 	FILE *fptr;
 	char opcode[5];
@@ -15,7 +22,8 @@ int main(int ac, char **av __attribute__((unused)))
 
 	head = NULL;
 
-	if ((fptr = fopen(av[1], "r")) == NULL)
+	fptr = fopen(av[1], "r");
+	if (fptr == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", av[1]);
 		exit(EXIT_FAILURE);
@@ -30,4 +38,5 @@ int main(int ac, char **av __attribute__((unused)))
 	}
 
 	free_f(head);
+	return (0);
 }

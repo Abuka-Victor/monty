@@ -34,7 +34,8 @@ typedef struct instruction_s
         void (*f)(stack_f **stack, unsigned int line_number);
 } instruction_t;
 
-
+#define _POSIX_C_SOURCE  200809L
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
